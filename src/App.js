@@ -1,7 +1,4 @@
 import './App.scss';
-import './components/todos'
-// import { Todos } from './components/todos';
-// import { Goals } from './components/goals';
 import  Menu  from './components/Menu/menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormTaskAndGoal from './components/Form/form';
@@ -15,11 +12,6 @@ function App() {
   return (
     <div className="App">
       <Menu/>
-      
-      
-      { /*<Todos/> }
-      { <Goals/> */}
-
       <Container>
       <Row>
         <Col xs={0} md={0}  className='d-none d-sm-block d-sm-none d-md-block '><FormTaskAndGoal/></Col>
