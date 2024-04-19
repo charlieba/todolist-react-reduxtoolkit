@@ -5,7 +5,9 @@ export const todoSlice = createSlice({
     initialState: {
         value: [
             {
-                'name':'caminar al perro'
+                'name':'caminar al perro',
+                'description':'Llevar al perro al parque',
+                'dueDate':'2024-04-20'
             }
         ],
     },

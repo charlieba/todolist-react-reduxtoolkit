@@ -2,22 +2,22 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import "./item.scss";
 
-function Item() {
+function Item(props) {
   return (
     <Card >
       <Card.Body>
-        <Card.Title >Proyecto del curso de desarrollo Web</Card.Title>
+        <Card.Title >{props.name}</Card.Title>
         <Card.Text className="fw-bold">
           Description
         </Card.Text>
         <Card.Text>
-          Elaborar una aplicación web responsive en la que se pueda llevar el control de mis tareas y metas personales.
+          {props.description}
         </Card.Text>
         <Card.Text className="fw-bold">
           Due Date
         </Card.Text>
         <Card.Text>
-            31/05/2024
+          {props.dueDate}
         </Card.Text>
       </Card.Body>
       <Card.Body>
