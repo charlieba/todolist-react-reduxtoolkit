@@ -1,8 +1,21 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import "./item.scss";
+import {
+  removeTodo,
+} from '../../reducers/todoSlice'
+import { useDispatch } from 'react-redux';
+
 
 function Item(props) {
+  const dispatch = useDispatch();
+
+  const removeItem = (e) => {
+    e.preventDefault();
+    console.log(props.id);
+      dispatch(removeTodo(props.id));
+    }
+
   return (
     <Card >
       <Card.Body>
@@ -21,8 +34,8 @@ function Item(props) {
         </Card.Text>
       </Card.Body>
       <Card.Body>
-        <Button variant="info">Editar</Button>
-        <Button variant="info">Eliminar</Button>
+        {/*<Button variant="info">Editar</Button>*/}
+        <Button variant="info" onClick={removeItem}>Eliminar</Button>
       </Card.Body>
     </Card>
   );

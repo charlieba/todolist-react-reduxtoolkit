@@ -12,4 +12,5 @@ export default configureStore({
         option:optionReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger,checker)
+
 })

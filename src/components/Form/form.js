@@ -4,8 +4,10 @@ import './form.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addTodo,
-  selectTodos
 } from '../../reducers/todoSlice'
+import {
+  addGoal
+} from '../../reducers/goalsSlice'
 import { useRef } from "react";
 
 function FormTaskAndGoal() {
@@ -19,7 +21,12 @@ const addItem = (e) => {
   e.preventDefault();
     console.log(inputRefName.current.value);
     if(inputRefName.current.value && inputRefDescription.current.value && inputRefDueDate.current.value){
-      dispatch(addTodo({'name': inputRefName.current.value,'description':inputRefDescription.current.value,'dueDate':inputRefDueDate.current.value}));
+      if(option==="tasks"){
+        dispatch(addTodo({'name': inputRefName.current.value,'description':inputRefDescription.current.value,'dueDate':inputRefDueDate.current.value}));
+      }else{
+        dispatch(addGoal({'name': inputRefName.current.value,'description':inputRefDescription.current.value,'dueDate':inputRefDueDate.current.value}));
+      }
+      
     }
   }
 
