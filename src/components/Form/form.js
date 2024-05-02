@@ -12,7 +12,7 @@ function FormTaskAndGoal() {
   const inputRefName = useRef();
   const inputRefDescription = useRef();
   const inputRefDueDate = useRef();
-
+  const option = useSelector((state) => state.option.value);
   const dispatch = useDispatch();
 
 const addItem = (e) => {
@@ -38,7 +38,12 @@ const addItem = (e) => {
         <Form.Label>Due Date</Form.Label>
         <Form.Control type="date" placeholder="name@example.com" ref={inputRefDueDate}/>
       </Form.Group>
-      <Button variant="info"  onClick={addItem}>Add Goal</Button>
+      {(option==='tasks')&&
+         <Button variant="info"  onClick={addItem}>Add Tasks</Button>
+      }
+      {(option==='goals')&&
+         <Button variant="info"  onClick={addItem}>Add Goal</Button>
+      }
     </Form>
   </div>
  

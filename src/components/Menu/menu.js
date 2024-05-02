@@ -16,7 +16,7 @@ function Menu() {
         if(option==='tasks')
           dispatch(changeOption('goals'));
         else
-          dispatch(changeOption('tasks'))
+          dispatch(changeOption('tasks'));
     }
 
   return (
