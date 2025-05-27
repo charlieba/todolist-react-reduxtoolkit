@@ -12,6 +12,7 @@ function Item(props) {
 
   const removeItem = (e) => {
     e.preventDefault();
+    console.log("Removing item: ", props);
     console.log(props.id);
       dispatch(removeTodo(props.id));
     }

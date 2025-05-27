@@ -15,7 +15,7 @@ export function Todos(){
     const addItem = (e) => {
         e.preventDefault();
         console.log(inputRef.current);
-        //dispatch(addTodo({'name': inputRef.current.value}))
+        dispatch(addTodo({'name': inputRef.current.value}))
     }
 
     return (

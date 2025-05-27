@@ -64,7 +64,7 @@ function App() {
           <div className='scrolling'>
             {option==='tasks' &&
                 todos.map((todo, index)=>(
-                  <Item key={index} name={todo.name} description={todo.description} dueDate={todo.dueDate} id={todo.id}/>
+                  <Item key={index} name={todo.name} description={todo.description} dueDate={todo.dueDate} id={todo._id}/>
    
                  ))
             }      
