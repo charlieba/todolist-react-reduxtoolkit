@@ -6,12 +6,15 @@ import {
     selectTodos
 } from '../reducers/todoSlice'
 import { useRef } from "react";
+
 export function Todos(){
     const dispatch = useDispatch();
     const todos = useSelector(selectTodos);
     const inputRef = useRef();
+
     const addItem = (e) => {
         e.preventDefault();
+        console.log(inputRef.current);
         dispatch(addTodo({'name': inputRef.current.value}))
     }
 

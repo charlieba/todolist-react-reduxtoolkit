@@ -5,7 +5,9 @@ export const todoSlice = createSlice({
     initialState: {
         value: [
             {
-                'name':'Graduarme de la Universidad'
+                'name':'Graduarme de la Universidad',
+                'description':'Ganar todos los cursos',
+                'dueDate':'2028-04-20'
             }
         ],
     },

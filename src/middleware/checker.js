@@ -13,7 +13,8 @@ const checker = (store) => (next) => (action) => {
   ) {
     return alert("Nope. That's a bad idea.");
   }
-
+  console.log('esta es la accion');
+  console.log(action);
   return next(action);
 };
 

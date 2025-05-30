@@ -2,8 +2,8 @@ const List = (props) => {
     return (
       <ul>
         {props.items &&
-          props.items.map((item) => (
-            <li key={item.name}>
+          props.items.map((item,index) => (
+            <li key={index}>
               <span
                 onClick={() => props.toggle && props.toggle(item.id)}
                 style={{
